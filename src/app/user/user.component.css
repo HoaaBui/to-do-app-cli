@@ -1,0 +1,44 @@
+.user-table .container .btn + .btn {
+    margin-left: 1rem;
+}
+
+.user-table{
+    padding-top: 5rem;
+}
+
+.user-table-header {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.user-table .container table{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.user-table .container table tr{
+    padding-bottom: 0.5rem;
+    padding-right: 16px;
+    margin-right: 16px;
+}
+
+.user-table .container table tr th{
+    text-align: left;
+    background-color: rgb(70, 130, 180);
+    color: white;
+    padding: 0.5rem;
+    border: 1px solid rgb(70, 130, 180);
+}
+
+.user-table .container table tr td{
+    text-align: left;
+    /* border: 1px solid black; */
+    padding: 0.5rem;
+}
+
+.user-table .container table tr:nth-child(odd) td{
+    background-color: #e7edf0;
+}

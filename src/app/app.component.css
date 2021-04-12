@@ -1,0 +1,45 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, div, span, p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app-header{
+    background-color: rgb(70, 130, 180);
+}
+
+.app-header .header-container {
+	padding: 0.5rem 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.app-header .header-container span{
+	margin: 1rem 0;
+}
+
+.header-right{
+	width: 20%;
+}
+
+.header-right ul{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+.header-right ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 0.875rem;
+}
+
+.header-right ul li a:hover{
+	color: yellow;
+}
