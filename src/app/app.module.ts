@@ -4,6 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 const appRoutes : Routes = [
   {
@@ -15,7 +17,9 @@ const appRoutes : Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    CreateUserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
