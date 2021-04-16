@@ -1,0 +1,23 @@
+.form-footer .btn + .btn {
+    margin-left: 1rem;
+}
+
+.create-user-section{
+    padding-top: 5rem;
+}
+
+.form-heading {
+    margin-bottom: 0.5rem;
+}
+
+.form-body .row ~ .row{
+    margin-top: 1rem;
+}
+
+.form-footer {
+    margin-top: 2rem;
+}
+.create-user-container{
+    max-width: 600px;
+    margin: 0 auto;
+}

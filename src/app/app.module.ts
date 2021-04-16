@@ -7,10 +7,20 @@ import { UserComponent } from './user/user.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 const appRoutes : Routes = [
   {
     path: 'user',
     component: UserComponent
+  },
+  {
+    path: 'user/create-user',
+    component: CreateUserComponent
+  },
+  {
+    path: 'user/update-user/:id',
+    component: UpdateUserComponent
   }
 ];
 
@@ -23,7 +33,8 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

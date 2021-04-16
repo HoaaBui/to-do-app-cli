@@ -2,14 +2,14 @@
     <div class="container">
         <div class="user-table-header">
             <span>Users List</span>
-            <a href="#">Add user</a>
+            <a routerLink='create-user'>Add user</a>
         </div>
         <table>
             <tr>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
-                <th>Statusa</th>
+                <th>Status</th>
             </tr>
 
             <tr *ngFor="let user of users">
@@ -17,8 +17,8 @@
                 <td>{{user.email}}</td>
                 <td>{{user.gender}}</td>
                 <td>
-                    <button class="btn btn-primary">Update</button>
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary" (click)="onNavigate(user.id)">Update</button>
+                    <button class="btn btn-danger" (click)="onDeleteUser(user.id)">Delete</button>
                 </td>
             </tr>
         </table>

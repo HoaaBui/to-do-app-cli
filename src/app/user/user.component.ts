@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/userModel';
 import { UserInfo } from '../service/userService';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -10,7 +11,8 @@ import { UserInfo } from '../service/userService';
 export class UserComponent implements OnInit {
   userInfo: User[] = UserInfo;
   users: User[] = [];
-  constructor() { }
+  
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     localStorage.setItem('users', JSON.stringify(this.userInfo));
@@ -20,4 +22,14 @@ export class UserComponent implements OnInit {
     }
   }
 
+  onDeleteUser(id:Number) {
+    this.users = this.users.filter(user=> user.id !== id);
+    localStorage.setItem('users', JSON.stringify(this.users));
+    
+    alert("Xóa user thành công");
+  }
+
+  onNavigate(id: Number){
+    this.router.navigate(["user/update-user",id]);
+  }
 }
