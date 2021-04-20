@@ -15,9 +15,11 @@ export class UserComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    localStorage.setItem('users', JSON.stringify(this.userInfo));
-
-    if(localStorage.getItem('users')){
+    if(!localStorage.getItem('users')) {
+      localStorage.setItem('users', JSON.stringify(this.userInfo));
+    }
+    
+    if(localStorage.getItem('users')) {
       this.users = JSON.parse(localStorage.getItem('users') || '');
     }
   }
